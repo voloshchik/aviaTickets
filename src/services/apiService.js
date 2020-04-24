@@ -15,7 +15,7 @@ class Api {
   async countries(){
       try {
           const respons=await axios.get(`${this.url}/countries`)
-          console.log('respons', respons)
+        //   console.log('respons', respons)
           return respons.data
       } catch (error) {
           console.log(error)
@@ -25,7 +25,7 @@ class Api {
   async cities(){
       try {
         const respons=await axios.get(`${this.url}/cities`)
-        console.log('respons', respons)
+        // console.log('respons', respons)
         return respons.data
       } catch (error) {
           console.log(error)
