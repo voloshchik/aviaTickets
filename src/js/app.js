@@ -1,5 +1,5 @@
 import location from "../store/location";
-import '../'
+import '../plagins'
 import  '../css/style.css'
 location.init().then((res) => {
   console.log("res!", res);
