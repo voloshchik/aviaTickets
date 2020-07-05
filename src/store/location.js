@@ -1,4 +1,4 @@
-import api from "../services/apiService";
+import api from "../js/services/apiService";
 
 class Location {
   constructor(api) {
