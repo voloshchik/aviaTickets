@@ -1,8 +1,8 @@
-const path = require('path');
-const autoprefixer = require('autoprefixer');
-const precss = require('precss');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path')
+const autoprefixer = require('autoprefixer')
+const precss = require('precss')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   // Итак,  чтобы вебпак начал свою работу, нужно указать главный (основной) файл, который будет включать в себя все другие необходимые файлы (модули).
@@ -22,6 +22,7 @@ module.exports = {
     stats: 'minimal',
     hot: true,
   },
+  devtool: 'source-map',
   module: {
     // Для того, чтобы трансформировать файл, используются специальные утилиты - загрузчики (loaders).
     //Для любых настроек модуля вебпак используется поле module.
@@ -71,11 +72,12 @@ module.exports = {
       },
     ],
   },
+
   // Вебпак плагины используются для настройки процесса сборки.
   //Например, плагин для минификации кода (во время сборки код подвергается очистке и минификации).
   //Или плагин для сборки html страницы и css кода (скрипты вставляются в html, куски css собираются в один файл).
   plugins: [
-    new MiniCssExtractPlugin({ filename: './style.css' }),
+    new MiniCssExtractPlugin({filename: './style.css'}),
     new HtmlWebpackPlugin({
       template: 'index.html',
     }),
@@ -87,4 +89,4 @@ module.exports = {
     filename: '[name].[hash].js',
   },
   mode: 'development',
-};
+}
